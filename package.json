@@ -6,6 +6,9 @@
   "scripts": {
     "test": "make test"
   },
+  "bin": {
+    "treesort": "./bin/treesort"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/helstern/data-structures-js.git"

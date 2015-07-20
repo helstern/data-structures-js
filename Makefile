@@ -8,7 +8,7 @@ test:
 init: skel dep
 
 skel:
-	mkdir examples lib test conf
+	mkdir examples lib test conf bin
 	touch index.js
 
 dep:
