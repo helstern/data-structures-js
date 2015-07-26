@@ -1,6 +1,6 @@
-var constants = require('./constants.js');
-var LeafNode = require('./leafNode.js');
-var ChildPosition = require('./childPosition.js');
+var constants = require('./Constants.js');
+var LeafNode = require('./LeafNode.js');
+var ChildPosition = require('./ChildPosition.js');
 
 /**
  * @param {InnerNode} startNode
@@ -50,7 +50,7 @@ Cursor.prototype.hasNext = function(childPosition) {
         return this.hasNextRight();
     }
 
-    return true;
+    return false;
 }
 
 Cursor.prototype.hasNextLeft = function() {

@@ -1,10 +1,9 @@
 var expect = require("chai").expect;
 
-var constants = require('../../lib/bst/constants.js');
-var LeafNode = require('../../lib/bst/leafNode.js');
-var InnerNode = require('../../lib/bst/innerNode.js');
-var ChildPosition = require('../../lib/bst/childPosition.js');
-
+var constants = require('../../lib/bst/Constants.js');
+var LeafNode = require('../../lib/bst/LeafNode.js');
+var InnerNode = require('../../lib/bst/InnerNode.js');
+var ChildPosition = require('../../lib/bst/ChildPosition.js');
 
 describe("Binary search tree child position", function() {
 

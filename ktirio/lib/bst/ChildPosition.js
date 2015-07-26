@@ -1,7 +1,7 @@
 
-var constants = require('./constants.js');
-var LeafNode = require('./leafNode.js');
-var InnerNode = require('./innerNode.js');
+var constants = require('./Constants.js');
+var LeafNode = require('./LeafNode.js');
+var InnerNode = require('./InnerNode.js');
 var util = require('util');
 
 /**
@@ -43,6 +43,17 @@ ChildPosition.prototype._child = function() {
     return child;
 }
 
+ChildPosition.prototype.isLeaf = function() {
+    "use strict";
+
+    var child = this._child();
+    if (child instanceof LeafNode) {
+        return true;
+    }
+
+    return false;
+}
+
 /**
  * @returns {boolean}
  */
@@ -63,12 +74,8 @@ ChildPosition.prototype.allowsDelete = function() {
 ChildPosition.prototype.allowsInsert = function() {
     "use strict";
 
-    var child = this._child();
-    if (child instanceof LeafNode) {
-        return true;
-    }
-
-    return false;
+    var isLeaf = this.isLeaf();
+    return isLeaf;
 }
 
 /**

@@ -1,11 +1,11 @@
-var constants = require('./constants.js');
+var constants = require('./Constants.js');
 
 /**
  * @param value
  * @param {Function} comparator
  * @constructor
  */
-function Navigator(value, comparator) {
+function FinderNavigator(value, comparator) {
     "use strict";
     this.value = value;
     this.comparator = comparator;
@@ -13,8 +13,9 @@ function Navigator(value, comparator) {
 
 /**
  * @param {Cursor} cursor
+ * @returns {ChildPosition}
  */
-Navigator.prototype.navigate = function(cursor) {
+FinderNavigator.prototype.navigate = function(cursor) {
     "use strict";
 
     var comparisonResult = this._findNode(cursor);
@@ -29,10 +30,8 @@ Navigator.prototype.navigate = function(cursor) {
         return position;
     }
 
-    if (comparisonResult > 0) {
-        var position = cursor.positionOfChild(constants.POSITION_RIGHT);
-        return position;
-    }
+    var position = cursor.positionOfChild(constants.POSITION_RIGHT);
+    return position;
 
 }
 
@@ -42,7 +41,7 @@ Navigator.prototype.navigate = function(cursor) {
  * @param {int} comparisonResult
  * @private
  */
-Navigator.prototype._advanceCursor = function(cursor, comparisonResult) {
+FinderNavigator.prototype._advanceCursor = function(cursor, comparisonResult) {
     "use strict";
 
     if (comparisonResult == 0) {
@@ -66,7 +65,7 @@ Navigator.prototype._advanceCursor = function(cursor, comparisonResult) {
 /**
  * @param {Cursor} cursor
  */
-Navigator.prototype._findNode = function (cursor) {
+FinderNavigator.prototype._findNode = function (cursor) {
 
     var cursorValue = cursor.valueOfCurrent();
     var comparisonResult = this.comparator(this.value, cursorValue);
