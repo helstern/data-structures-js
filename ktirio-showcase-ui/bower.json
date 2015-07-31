@@ -1,0 +1,29 @@
+{
+  "name": "ktirio-showcase-ui",
+  "version": "0.1.0",
+  "homepage": "https://github.com/helstern/data-structures-js",
+  "authors": [
+    "radu helstern <radu.helstern@gmail.com>"
+  ],
+  "description": "ktirio-showcase-ui is the ui and style guide project for the ktirio-showcase-app",
+  "license": "MIT",
+  "main": [
+    "css/*",
+    "scss/*",
+    "fonts/*",
+    "js/*",
+    "img/*"
+  ],
+  "ignore": [
+    "scss/vendor",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Bootflat": "~2.0.4",
+    "bootstrap": "~3.3.5"
+  }
+}

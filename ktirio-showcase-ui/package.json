@@ -1,0 +1,32 @@
+{
+  "name": "ktirio-showcase-ui",
+  "version": "0.1.0",
+  "description": "showcase application for ktirio data structures",
+  "main": "index.js",
+  "scripts": {},
+  "bin": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helstern/data-structures-js.git"
+  },
+  "keywords": [
+    "data-structures",
+    "ktirio showcase ui",
+    "tree",
+    "trees",
+    "graph"
+  ],
+  "author": "radu helstern <radu.helstern@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/helstern/data-structures-js/issues"
+  },
+  "homepage": "https://github.com/helstern/data-structures-js/showcase#readme",
+  "devDependencies": {
+    "bowcat": "0.0.5",
+    "bower": "^1.4.1",
+    "http-server": "^0.8.0",
+    "node-sass": "^3.2.0",
+    "npm-path": "^1.0.2"
+  }
+}
